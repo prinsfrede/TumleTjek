@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TumleTjek"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000"
+        Background="#efded4"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,484,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ChildListButton}" CommandParameter="{Binding ElementName=mainframe}"/>
+        <Frame Name="mainframe" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

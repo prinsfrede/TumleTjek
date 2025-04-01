@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TumleTjek.ViewModel;
 
 namespace TumleTjek
 {
@@ -16,9 +17,12 @@ namespace TumleTjek
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm;
         public MainWindow()
         {
+            mvm = new MainViewModel();
             InitializeComponent();
+            this.DataContext = mvm;
         }
     }
 }
