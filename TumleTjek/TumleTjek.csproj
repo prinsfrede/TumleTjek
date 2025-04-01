@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Repo\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
 </Project>
