@@ -15,11 +15,13 @@ namespace TumleTjek.ViewModel
     public class MainViewModel
     {
         public ICommand ChildListButton { get; }
+        public ICommand MedarbejderLoginButton { get; }
 
 
         public MainViewModel()
         {
             ChildListButton = new RelayCommand(ChildListButtonExecute);
+            MedarbejderLoginButton = new RelayCommand(MedarbejderLoginButtonExecute);
         }
 
 
@@ -32,6 +34,11 @@ namespace TumleTjek.ViewModel
                 frame.Navigate(new ChildrenList());
             }
 
+        }
+        private void MedarbejderLoginButtonExecute(object parameter)
+        {
+            MedarbejderLogin ml = new MedarbejderLogin();
+            ml.Show();
         }
 
 
