@@ -11,6 +11,7 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,484,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ChildListButton}" CommandParameter="{Binding ElementName=mainframe}"/>
+        <Button Content="Medarbejder Login" HorizontalAlignment="Left" Margin="860,526,0,0" VerticalAlignment="Top" Height="34" Width="104" Background="#9f6e4e" Foreground="White" Command="{Binding ChildListButton}" CommandParameter="{Binding ElementName=mainframe}"/>
         <Frame Name="mainframe" NavigationUIVisibility="Hidden"/>
 
     </Grid>
