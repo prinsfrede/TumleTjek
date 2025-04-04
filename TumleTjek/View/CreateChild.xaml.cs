@@ -12,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TumleTjek.ViewModel;
-using TumleTjek.TechnicalServices;
 
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for MedarbejderWindow.xaml
+    /// Interaction logic for CreateChild.xaml
     /// </summary>
-    public partial class MedarbejderWindow : Window
+    public partial class CreateChild : Window
     {
-        MedarbejderViewModel mvvm; 
-        public MedarbejderWindow()
+        CreateChildViewModel ccvm;
+        public CreateChild()
         {
-            mvvm = new MedarbejderViewModel();
+            ccvm = new CreateChildViewModel();
             InitializeComponent();
-            this.DataContext = mvvm;
+            this.DataContext = ccvm;
         }
-
     }
 }
