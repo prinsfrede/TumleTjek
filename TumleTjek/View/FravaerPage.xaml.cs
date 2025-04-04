@@ -4,32 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Automation.Provider;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for MedarbejderWindow.xaml
+    /// Interaction logic for FravaerPage.xaml
     /// </summary>
-    public partial class MedarbejderWindow : Window
+    public partial class FravaerPage : Page
     {
-        public MedarbejderWindow()
+        public FravaerPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click_StatusFra(object sender, RoutedEventArgs e)
-        {
-            // Navigate to FravaerPage.xaml
-            var fravaerPage = new FravaerPage();
-            this.Content = fravaerPage;
         }
     }
 }

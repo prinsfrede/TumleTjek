@@ -15,7 +15,7 @@
         <Button x:Name="AktiviteterButton" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
 
         </Button>
-        <Button Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+        <Button x:Name="StatusFra" Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Click="Button_Click_StatusFra" >
 
         </Button>
         <Button Content="Liste af Børn" HorizontalAlignment="Left" Margin="28,308,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
