@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TumleTjek.ViewModel;
+using TumleTjek.TechnicalServices;
 
 namespace TumleTjek.View
 {
@@ -20,9 +22,12 @@ namespace TumleTjek.View
     /// </summary>
     public partial class MedarbejderWindow : Window
     {
+        MedarbejderViewModel mvvm; 
         public MedarbejderWindow()
         {
+            mvvm = new MedarbejderViewModel();
             InitializeComponent();
+            this.DataContext = mvvm;
         }
 
         private void Button_Click_StatusFra(object sender, RoutedEventArgs e)

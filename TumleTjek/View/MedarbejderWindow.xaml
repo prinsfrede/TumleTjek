@@ -21,7 +21,7 @@
         <Button Content="Liste af Børn" HorizontalAlignment="Left" Margin="28,308,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
 
         </Button>
-        <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+        <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddChildButton}" >
 
         </Button>
         <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
