@@ -10,8 +10,24 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         >
-    
+
     <Grid>
-        
+        <Button x:Name="AktiviteterButton" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+
+        </Button>
+        <Button Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+
+        </Button>
+        <Button Content="Liste af Børn" HorizontalAlignment="Left" Margin="28,308,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+
+        </Button>
+        <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+
+        </Button>
+        <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+
+        </Button>
+        <Image x:Name="Logo" Source="/Image/LogoTumleTjek.png" Margin="186,109,26,28" />
+        <TextBlock Text="Velkommen" HorizontalAlignment="Left" Margin="452,197,0,0" VerticalAlignment="Top" FontSize="45" FontWeight="Bold" Foreground="Black" Height="70" Width="256"/>
     </Grid>
 </Window>
