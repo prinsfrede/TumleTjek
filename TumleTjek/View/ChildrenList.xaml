@@ -38,18 +38,7 @@
         FontSize="14"
         />
         </Border>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=6}" Margin="332,187,373,66">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Padding="5">
-                        <StackPanel>
-                            <TextBlock Text="{Binding ChildName}" FontWeight="Bold" FontSize="16"/>
-                            <TextBlock Text="{Binding Parents}" FontSize="14"/>
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+    
 
     </Grid>
 </Page>
