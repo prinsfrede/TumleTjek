@@ -8,6 +8,7 @@ namespace TumleTjek.Model
 {
     public class Barn
     {
+        public int BarnID { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
 
