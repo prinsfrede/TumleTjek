@@ -87,6 +87,12 @@ namespace TumleTjek.ViewModel
               IsSick = false
           };
             childrepo.Add(newChild);
+
+            Name = string.Empty;
+            Age = string.Empty;
+            ForældreName = string.Empty;
+            ForældrePhoneNumber = string.Empty;
+
             MessageBox.Show("Barn tilføjet");
 
         }
