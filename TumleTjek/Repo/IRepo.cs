@@ -13,6 +13,6 @@ namespace TumleTjek.Repo
         void Remove(T item);
         void Update(T item);
         T GetById(int id);
-        IEnumerable<T> GetAll();
+        List<T> GetAll();
     }
 }

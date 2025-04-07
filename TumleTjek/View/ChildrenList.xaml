@@ -12,6 +12,16 @@
     
     <Grid Background="#efded4">
         <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Click="GoBack_Click"/>
-        
+        <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" Margin="5" />
+                        <TextBlock Text="{Binding forældre.Name}" FontSize="16" Margin="5" FontWeight="Light"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
     </Grid>
 </Page>

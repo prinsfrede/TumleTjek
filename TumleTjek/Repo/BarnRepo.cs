@@ -34,7 +34,7 @@ namespace TumleTjek.Repo
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
-                
+
                 using (SqlCommand command = new SqlCommand("INSERT INTO Barn (Name, Age, Forældre, IsSick) " + " VALUES (@Name, @Age, @Forældre, @IsSick)" + "SELECT @@IDENTITY", connection))
                 {
                     command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = ChildToBeCreated.Name;
@@ -70,14 +70,43 @@ namespace TumleTjek.Repo
             return barns.FirstOrDefault(b => b.Age == id);
         }
 
-        public IEnumerable<Barn> GetAll()
+        public List<Barn> GetAll()
         {
+            List<Barn> barns = new List<Barn>();
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("SELECT  BarnID ,Name, Age, Forældre, IsSick from Barn", connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Barn barn = new Barn
+                            {
+                                BarnID = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Age = reader.GetInt32(2),
+                                forældre = new Forældre
+                                {
+                                    Name = reader.GetString(3),
+                                   
+                                },
+                                IsSick = reader.GetBoolean(4)
+                            };
+                            barns.Add(barn);
+                        }
+                    }
+                }
+                
+            }
             return barns;
         }
     }
-
-        
-
-
-    
 }
+
+
+
+
+
+

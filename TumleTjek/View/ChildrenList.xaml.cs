@@ -26,6 +26,7 @@ namespace TumleTjek.View
         {
             clvm = new ChildrenListViewModel();
             InitializeComponent();
+            this.DataContext = clvm;
         }
 
         private void GoBack_Click(object sender, RoutedEventArgs e)

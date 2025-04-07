@@ -17,7 +17,7 @@ namespace TumleTjek.Repo
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Aktivitet> GetAll()
+        public List<Aktivitet> GetAll()
         {
             throw new NotImplementedException();
         }
