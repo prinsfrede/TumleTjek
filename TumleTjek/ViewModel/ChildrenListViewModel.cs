@@ -20,9 +20,9 @@ namespace TumleTjek.ViewModel
         public ChildrenListViewModel()
         {
             ChildVM = new ObservableCollection<ChildViewModel>();
-            foreach (Barn barn in barnRepo.GetAll())
+            foreach (Child barn in barnRepo.GetAll())
             {
-                ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.forældre, barn.IsSick));
+                ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Parents, barn.IsMet));
             }
         }
     }

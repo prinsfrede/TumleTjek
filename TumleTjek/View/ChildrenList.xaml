@@ -17,7 +17,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" Margin="5" />
-                        <TextBlock Text="{Binding forældre.Name}" FontSize="16" Margin="5" FontWeight="Light"/>
+                        <TextBlock Text="{Binding Parents.Name}" FontSize="16" Margin="5" FontWeight="Light"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

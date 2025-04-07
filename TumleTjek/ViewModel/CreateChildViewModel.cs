@@ -75,16 +75,17 @@ namespace TumleTjek.ViewModel
             {
                 ageint = 0;
             }
-          var newChild = new Barn
+          var newChild = new Child
           {
               Name = Name,
               Age = ageint,
-              forældre = new Forældre
+              
+              Parents = new Forældre
               {
                   Name = ForældreName,
                   PhoneNumber = ForældrePhoneNumber
               },
-              IsSick = false
+             
           };
             childrepo.Add(newChild);
 

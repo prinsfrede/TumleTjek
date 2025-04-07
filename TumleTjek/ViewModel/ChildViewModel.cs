@@ -9,22 +9,21 @@ namespace TumleTjek.ViewModel
 {
     public class ChildViewModel
     {
-        public ChildViewModel(Barn child, string name, int age, Forældre forældre, bool isSick)
+        public ChildViewModel(Child child, string? name, int? age, Forældre parents, bool? isMet)
         {
             Child = child;
             Name = name;
             Age = age;
-            this.forældre = forældre;
-            IsSick = isSick;
+            this.Parents = parents;
+            IsMet = isMet;
         }
 
+        public Child Child { get; set; }
+        public string? Name { get; set; }
+        public int? Age { get; set; }
 
-        public Barn Child { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public Forældre Parents { get; set; }
 
-        public Forældre forældre { get; set; }
-
-        public bool IsSick { get; set; }
+        public bool? IsMet { get; set; }
     }
 }

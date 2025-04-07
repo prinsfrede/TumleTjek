@@ -13,86 +13,86 @@ using System.Data;
 
 namespace TumleTjek.Repo
 {
-    public class BarnRepo : IRepo<Barn>
+    public class BarnRepo : IRepo<Child>
     {
         private readonly string ConnectionString;
-        private List<Barn> barns;
+        private List<Child> children;
         public BarnRepo()
         {
             IConfigurationRoot config = new ConfigurationBuilder()
                 .AddJsonFile("TechnicalServices/appsettings.json")
                 .Build();
 
-            barns = new List<Barn>();
+            children = new List<Child>();
 
             ConnectionString = config.GetConnectionString("MyDBConnection");
         }
 
 
-        public void Add(Barn ChildToBeCreated)
+        public void Add(Child ChildToBeCreated)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand("INSERT INTO Barn (Name, Age, Forældre, IsSick) " + " VALUES (@Name, @Age, @Forældre, @IsSick)" + "SELECT @@IDENTITY", connection))
+                using (SqlCommand command = new SqlCommand("INSERT INTO Child (Name, Age, ParentsName, ParentsPhoneNumber) " + " VALUES (@Name, @Age, @ParentsName, @ParentsPhoneNumber)" + "SELECT @@IDENTITY", connection))
                 {
                     command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = ChildToBeCreated.Name;
+                   
                     command.Parameters.Add("@Age", SqlDbType.Int).Value = ChildToBeCreated.Age;
-                    string forældreinfo = $"{ChildToBeCreated.forældre.Name} ({ChildToBeCreated.forældre.PhoneNumber})";
-                    command.Parameters.Add("@Forældre", SqlDbType.NVarChar).Value = forældreinfo;
-
-
-                    command.Parameters.Add("@IsSick", SqlDbType.Bit).Value = ChildToBeCreated.IsSick;
-                    ChildToBeCreated.BarnID = Convert.ToInt32(command.ExecuteScalar());
-                    barns.Add(ChildToBeCreated);
+                    command.Parameters.Add("@ParentsName", SqlDbType.NVarChar).Value = ChildToBeCreated.Parents.Name;
+                    command.Parameters.Add("@ParentsPhoneNumber", SqlDbType.NVarChar).Value = ChildToBeCreated.Parents.PhoneNumber;
+                  
+                    ChildToBeCreated.ChildID = Convert.ToInt32(command.ExecuteScalar());
+                    children.Add(ChildToBeCreated);
 
                 }
             }
         }
 
-        public void Remove(Barn item)
+        public void Remove(Child item)
         {
-            barns.Remove(item);
+            children.Remove(item);
         }
 
-        public void Update(Barn item)
+        public void Update(Child item)
         {
-            var index = barns.FindIndex(b => b.Name == item.Name);
+            var index = children.FindIndex(b => b.Name == item.Name);
             if (index != -1)
             {
-                barns[index] = item;
+                children[index] = item;
             }
         }
 
-        public Barn GetById(int id)
+        public Child GetById(int id)
         {
-            return barns.FirstOrDefault(b => b.Age == id);
+            return children.FirstOrDefault(b => b.Age == id);
         }
 
-        public List<Barn> GetAll()
+        public List<Child> GetAll()
         {
-            List<Barn> barns = new List<Barn>();
+            List<Child> barns = new List<Child>();
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("SELECT  BarnID ,Name, Age, Forældre, IsSick from Barn", connection))
+                using (SqlCommand command = new SqlCommand("SELECT  ChildID ,Name, Age, ParentsName, ParentsPhoneNumber, IsMet from Child", connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            Barn barn = new Barn
+                            Child barn = new Child
                             {
-                                BarnID = reader.GetInt32(0),
-                                Name = reader.GetString(1),
-                                Age = reader.GetInt32(2),
-                                forældre = new Forældre
+                                ChildID = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0),
+                                Name = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                Age = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2),
+                                Parents = new Forældre
                                 {
-                                    Name = reader.GetString(3),
-                                   
+                                    Name = reader.IsDBNull(3) ? null : reader.GetString(3),
+                                    PhoneNumber = reader.IsDBNull(4) ? null : reader.GetString(4)
+
                                 },
-                                IsSick = reader.GetBoolean(4)
+                                IsMet = reader.IsDBNull(5) ? (bool?)null : reader.GetBoolean(5)
                             };
                             barns.Add(barn);
                         }
