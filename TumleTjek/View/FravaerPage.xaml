@@ -7,12 +7,27 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FravaerPage">
-    
+
 
     <Grid>
-        <Rectangle Fill="White" />
-        <TextBlock Text="FraværPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24" FontWeight="Bold"/>   
-       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="599*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#efded4" Grid.ColumnSpan="2" />
+        <TextBlock Text="Status på fravær" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24" FontWeight="Bold" Height="32" Width="184" Grid.Column="1"/>
+        
+        <Button x:Name="Tilbage" Content="Tilbage" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White">
+
+        </Button>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,92,10,126">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
 
 
     </Grid>
