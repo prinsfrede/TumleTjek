@@ -7,11 +7,49 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1000"
       Title="ChildrenList">
-    
-   
-    
+
+
+
     <Grid Background="#efded4">
-        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Click="GoBack_Click"/>
-        
+        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="813,514,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Click="GoBack_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,88,0,0" TextWrapping="Wrap" FontSize="32" FontWeight="Medium" VerticalAlignment="Top"><Run Text="Find dit barn."/><Run Language="da-dk" /></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="837,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Dagens Aktiviteter" FontWeight="ExtraBlack" /><LineBreak/><Run Language="da-dk"/></TextBlock>
+        <Image Margin="10,5,769,402" Source="/Image/LogoTumleTjek.png" Stretch="Fill"/>
+        <TextBox HorizontalAlignment="Left" Margin="355,136,0,0" TextWrapping="Wrap" BorderBrush="Black"  VerticalAlignment="Top" Background="Transparent" Width="180" Height="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="355,142,0,0" TextWrapping="Wrap" Text="🔍 Søg" FontSize="18" VerticalAlignment="Top" Width="180"/>
+
+        <Border 
+    Width="159" 
+    Height="105"
+    CornerRadius="15" 
+    BorderBrush="Black" 
+    BorderThickness="2" 
+    Background="White"
+    HorizontalAlignment="Left" 
+    VerticalAlignment="Top"
+    Margin="813,136,0,0">
+
+            <TextBox 
+        Background="Transparent"
+        BorderThickness="0"
+        TextWrapping="Wrap" 
+        Text="Bla bla bla" 
+        Padding="10"
+        FontSize="14"
+        />
+        </Border>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=6}" Margin="355,187,373,66">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Padding="5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding ChildName}" FontWeight="Bold" FontSize="16"/>
+                            <TextBlock Text="{Binding Parents}" FontSize="14"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Page>
