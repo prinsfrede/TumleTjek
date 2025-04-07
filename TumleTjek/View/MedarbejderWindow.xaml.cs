@@ -30,11 +30,7 @@ namespace TumleTjek.View
             this.DataContext = mvvm;
         }
 
-        private void Button_Click_StatusFra(object sender, RoutedEventArgs e)
-        {
-            // Navigate to FravaerPage.xaml
-            var fravaerPage = new FravaerPage();
-            this.Content = fravaerPage;
-        }
+       
+        
     }
 }

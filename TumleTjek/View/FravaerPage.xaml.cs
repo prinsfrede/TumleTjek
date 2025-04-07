@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TumleTjek.ViewModel;
 
 namespace TumleTjek.View
 {
@@ -20,9 +21,12 @@ namespace TumleTjek.View
     /// </summary>
     public partial class FravaerPage : Page
     {
+        FravaerPageViewModel fpvm;
         public FravaerPage()
         {
+            fpvm = new FravaerPageViewModel();
             InitializeComponent();
+            this.DataContext = fpvm;
         }
     }
 }

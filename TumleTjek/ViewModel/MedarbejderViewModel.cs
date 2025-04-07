@@ -14,10 +14,12 @@ namespace TumleTjek.ViewModel
     {
 
         public ICommand AddChildButton { get; }
+        public ICommand Button_Click_StatusFra { get; }
 
         public MedarbejderViewModel()
         {
             AddChildButton = new RelayCommand(AddChildButtonExecute);
+            Button_Click_StatusFra = new RelayCommand(Button_Click_StatusFraExcute);
         }
 
 
@@ -25,6 +27,11 @@ namespace TumleTjek.ViewModel
         {
             CreateChild createChild = new CreateChild();
             createChild.Show();
+        }
+        private void Button_Click_StatusFraExcute(object parameter)
+        {
+            FravaerPage fravaerPage = new FravaerPage();
+            fravaerPage.Show();
         }
 
     }
