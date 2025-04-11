@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModel\HomeViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Image\LogoTumleTjek.png" />
   </ItemGroup>
 

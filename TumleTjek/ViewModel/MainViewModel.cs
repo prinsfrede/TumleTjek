@@ -3,49 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Navigation;
-using TumleTjek.TechnicalServices;
-using TumleTjek.View;
+using TumleTjek.Stores;
 
 namespace TumleTjek.ViewModel
 {
-    public class MainViewModel
+    public class MainViewModel: BaseViewModel
     {
-        public ICommand ChildListButton { get; }
-        public ICommand MedarbejderLoginButton { get; }
 
 
-        public MainViewModel()
+        private readonly NavigationStore _navigationStore;
+
+        public BaseViewModel CurrentViewModel { get => _navigationStore.CurrentViewModel; }
+
+        public MainViewModel(NavigationStore navigationStore)
         {
-            ChildListButton = new RelayCommand(ChildListButtonExecute);
-            MedarbejderLoginButton = new RelayCommand(MedarbejderLoginButtonExecute);
+            _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
         }
 
-
-
-        private void ChildListButtonExecute(object parameter)
+        private void OnCurrentViewModelChanged()
         {
-            var frame = parameter as Frame;
-            if (frame != null)
-            {
-                frame.Navigate(new ChildrenList());
-            }
+            OnPropertyChanged(nameof(CurrentViewModel));
+        }
 
-        }
-        private void MedarbejderLoginButtonExecute(object parameter)
-        {
-            MedarbejderLogin ml = new MedarbejderLogin();
-            ml.Show();
-        }
 
 
 
     }
-
-
-
-
 }
