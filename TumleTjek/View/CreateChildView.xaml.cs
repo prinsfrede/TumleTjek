@@ -10,22 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TumleTjek.ViewModel;
 
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for CreateChild.xaml
+    /// Interaction logic for CreateChildView.xaml
     /// </summary>
-    public partial class CreateChild : Window
+    public partial class CreateChildView : UserControl
     {
-        CreateChildViewModel ccvm;
-        public CreateChild()
+        public CreateChildView()
         {
-            ccvm = new CreateChildViewModel();
             InitializeComponent();
-            this.DataContext = ccvm;
         }
     }
 }

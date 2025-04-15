@@ -6,34 +6,46 @@
         xmlns:local="clr-namespace:TumleTjek"
        
         xmlns:views="clr-namespace:TumleTjek.View"
-        xmlns:view="clr-namespace:TumleTjek.View"
         
         xmlns:viewModel="clr-namespace:TumleTjek.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000"
+       
         WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
         ResizeMode="NoResize"
+        WindowState="Normal"
         
         >
     <Grid>
         <ContentControl Content="{Binding CurrentViewModel}">
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type viewModel:HomeViewModel1}">
-                    <views:HomeView/>
+                    <views:HomeView />
+                    
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModel:ChildrenListViewModel}">
                     <views:ChildrenListView/>
                 </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type viewModel:MedarbejderLoginVM}">
+                    <views:MedarbejderLogin/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewModel:MedarbejderViewModel}">
+                    <views:MedarbejderView/>
+                </DataTemplate>
 
 
+                <DataTemplate DataType="{x:Type viewModel:CreateChildViewModel}">
+                    <views:CreateChildView/>
+                </DataTemplate>
 
-            </ContentControl.Resources>         
-            
-            
+                <DataTemplate DataType="{x:Type viewModel:AbsenceViewModel}">
+                    <views:AbsenceView/>
+                </DataTemplate>
+
+
+            </ContentControl.Resources>
         </ContentControl>
-        
-        
-        
-        
     </Grid>
 </Window>

@@ -5,27 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using TumleTjek.Model;
+using TumleTjek.Stores;
 using TumleTjek.TechnicalServices;
 using TumleTjek.View;
+using TumleTjek.ViewModel;
+using TumleTjek.Services;
 
 namespace TumleTjek.ViewModel
 {
-    public class MedarbejderViewModel
+    public class MedarbejderViewModel : BaseViewModel
     {
 
         public ICommand AddChildButton { get; }
+        public ICommand AbsenceButton { get; }
 
-        public MedarbejderViewModel()
+        public MedarbejderViewModel(NavigationStore navigationStore)
         {
-            AddChildButton = new RelayCommand(AddChildButtonExecute);
+            AddChildButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new CreateChildViewModel(navigationStore)));
+            AbsenceButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new AbsenceViewModel(navigationStore)));
         }
 
 
-        private void AddChildButtonExecute(object parameter)
-        {
-            CreateChild createChild = new CreateChild();
-            createChild.Show();
-        }
+       
 
     }
 }

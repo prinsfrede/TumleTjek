@@ -9,12 +9,13 @@ using System.Windows;
 using System.Windows.Input;
 using TumleTjek.Model;
 using TumleTjek.Repo;
+using TumleTjek.Stores;
 using TumleTjek.TechnicalServices;
 using TumleTjek.View;
 
 namespace TumleTjek.ViewModel
 {
-    public class CreateChildViewModel: INotifyPropertyChanged
+    public class CreateChildViewModel: BaseViewModel
     {
         private string _name;
         private string _age;
@@ -24,11 +25,13 @@ namespace TumleTjek.ViewModel
         private BarnRepo childrepo = new BarnRepo();
 
         public ICommand AddChildButton { get; }
-  
-        public CreateChildViewModel()
+        public ICommand GoBackButton { get; }
+
+        public CreateChildViewModel(NavigationStore navigationStore)
         {
             AddChildButton = new RelayCommand(AddChildButtonExecute);
-        
+            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderViewModel(navigationStore)));
+
         }
 
         public string Name

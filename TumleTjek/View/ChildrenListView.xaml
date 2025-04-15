@@ -5,10 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TumleTjek.View"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
-    
+            
+             Height="600"
+                Width="1000"
+             >
+
+
+
     <Grid Background="#efded4">
-        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" />
+        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackCommand}" />
         <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}">
             <ListBox.ItemTemplate>
                 <DataTemplate>

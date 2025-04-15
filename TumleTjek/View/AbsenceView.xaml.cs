@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for FravaerPage.xaml
+    /// Interaction logic for FraeverView.xaml
     /// </summary>
-    public partial class FravaerPage : Page
+    public partial class AbsenceView : UserControl
     {
-        public FravaerPage()
+        public AbsenceView()
         {
             InitializeComponent();
         }

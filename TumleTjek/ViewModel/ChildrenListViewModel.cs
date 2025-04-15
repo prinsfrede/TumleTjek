@@ -4,14 +4,18 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using TumleTjek.Model;
 using TumleTjek.Repo;
 using TumleTjek.Stores;
+using TumleTjek.TechnicalServices;
 
 namespace TumleTjek.ViewModel
 {
     public class ChildrenListViewModel : BaseViewModel
     {
+        public ICommand GoBackCommand { get; }
+
         private readonly NavigationStore _navigationStore;
 
         private BarnRepo barnRepo = new BarnRepo();
@@ -29,6 +33,9 @@ namespace TumleTjek.ViewModel
             {
                 ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Parents, barn.IsMet));
             }
+            GoBackCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new HomeViewModel1(navigationStore)));
+
+
         }
     }
 }
