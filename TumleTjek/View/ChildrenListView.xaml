@@ -5,16 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TumleTjek.View"
              mc:Ignorable="d" 
-            
              Height="600"
-                Width="1000"
-             >
-
-
+             Width="1000">
 
     <Grid Background="#efded4">
-        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackCommand}" />
-        <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}">
+        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="820,511,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackCommand}" />
+        <ListBox ItemsSource="{Binding ChildVM}" Margin="296,142,406,111">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -25,5 +21,40 @@
             </ListBox.ItemTemplate>
 
         </ListBox>
+        <Image Margin="36,10,768,410" Source="/Image/LogoTumleTjek.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,52,0,0" TextWrapping="Wrap" FontSize="32" FontWeight="Medium" VerticalAlignment="Top"><Run Text="Find dit barn."/><Run Language="da-dk" /></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="831,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Dagens Aktiviteter" FontWeight="ExtraBlack" /><LineBreak/><Run Language="da-dk"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="296,100,0,0" TextWrapping="Wrap" BorderBrush="Black"  VerticalAlignment="Top" Background="Transparent" Width="180" Height="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="296,106,0,0" TextWrapping="Wrap" Text="🔍 Søg" FontSize="18" VerticalAlignment="Top" Width="180"/>
+        <Border 
+    Width="160" 
+    Height="200"
+    CornerRadius="15" 
+    BorderBrush="Black" 
+    BorderThickness="2" 
+    Background="White"
+    HorizontalAlignment="Left" 
+    VerticalAlignment="Top"
+    Margin="807,140,0,0">
+
+            <TextBox 
+        Background="Transparent"
+        BorderThickness="0"
+        TextWrapping="Wrap" 
+        Text="Bla bla bla" 
+        Padding="10"
+        FontSize="14" Margin="-2,-1,2,0" RenderTransformOrigin="0.5,0.5"
+        >
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="1.428"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.308"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </Border>
+
     </Grid>
 </UserControl>
