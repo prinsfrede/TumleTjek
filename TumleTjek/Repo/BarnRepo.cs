@@ -35,14 +35,16 @@ namespace TumleTjek.Repo
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand("INSERT INTO Child (Name, Age, ParentsName, ParentsPhoneNumber) " + " VALUES (@Name, @Age, @ParentsName, @ParentsPhoneNumber)" + "SELECT @@IDENTITY", connection))
+                using (SqlCommand command = new SqlCommand("INSERT INTO Child (Name, Age, ParentsName, ParentsPhoneNumber, IsMet, Details) " + " VALUES (@Name, @Age, @ParentsName, @ParentsPhoneNumber, @IsMet, @Details)" + "SELECT @@IDENTITY", connection))
                 {
                     command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = ChildToBeCreated.Name;
                    
                     command.Parameters.Add("@Age", SqlDbType.Int).Value = ChildToBeCreated.Age;
                     command.Parameters.Add("@ParentsName", SqlDbType.NVarChar).Value = ChildToBeCreated.Parents.Name;
                     command.Parameters.Add("@ParentsPhoneNumber", SqlDbType.NVarChar).Value = ChildToBeCreated.Parents.PhoneNumber;
-                  
+                    command.Parameters.Add("@IsMet", SqlDbType.Bit).Value = ChildToBeCreated.IsMet = false;
+                    command.Parameters.Add("@Details", SqlDbType.NVarChar).Value = ChildToBeCreated.Details = "";
+
                     ChildToBeCreated.ChildID = Convert.ToInt32(command.ExecuteScalar());
                     children.Add(ChildToBeCreated);
 

@@ -26,7 +26,22 @@ namespace TumleTjek.ViewModel
 
         public string Name { get; }
 
-        public string Details { get; set; }
+        private string _details;
+
+        public string Details
+        {
+            get => _details;
+            set
+            {
+                if (_details != value)
+                {
+                    _details = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+
 
         public bool IsMet { get; set; }
 
@@ -49,6 +64,8 @@ namespace TumleTjek.ViewModel
             IsMet = true;
             SaveChanges();
             MessageBox.Show($"Barnet {Name} er tjekket ind.", "Tjek Ind", MessageBoxButton.OK, MessageBoxImage.Information);
+            Details = "";
+
         }
 
         private void CheckOut()

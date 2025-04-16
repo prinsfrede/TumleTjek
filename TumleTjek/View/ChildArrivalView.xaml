@@ -12,7 +12,7 @@
 
 
     <Grid>
-        <TextBox HorizontalAlignment="Center" Margin="0,157,0,0" TextWrapping="Wrap" Text="{Binding Details, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="288" Height="143" FontStyle="Italic" Foreground="Gray" />
+        <TextBox x:Name="DetailBox" HorizontalAlignment="Center" Margin="0,157,0,0" TextWrapping="Wrap" Text="{Binding Details, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="288" Height="143" FontStyle="Italic" Foreground="Gray" />
 
         <TextBlock TextWrapping="Wrap" Text="{Binding Name}" Margin="106,79,264,488" FontSize="25" FontWeight="Bold" />
         <Button Content="Tjek Barn Ind" HorizontalAlignment="Left" Margin="50,516,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding TjekIndButton}" />
