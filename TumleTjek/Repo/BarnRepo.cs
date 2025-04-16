@@ -55,13 +55,26 @@ namespace TumleTjek.Repo
             children.Remove(item);
         }
 
-        public void Update(Child item)
+        public void Update(Child ChildToBeUpdated)
         {
-            var index = children.FindIndex(b => b.Name == item.Name);
-            if (index != -1)
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                children[index] = item;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("UPDATE Child SET Name = @Name, Age = @Age, ParentsName = @ParentsName, ParentsPhoneNumber = @ParentsPhoneNumber, Details = @Details, IsMet = @IsMet WHERE ChildID = @ChildID", connection))
+                {
+                    command.Parameters.Add("@ChildID", SqlDbType.Int).Value = ChildToBeUpdated.ChildID;
+                    command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = ChildToBeUpdated.Name;
+                    command.Parameters.Add("@Age", SqlDbType.Int).Value = ChildToBeUpdated.Age;
+                    command.Parameters.Add("@ParentsName", SqlDbType.NVarChar).Value = ChildToBeUpdated.Parents.Name;
+                    command.Parameters.Add("@ParentsPhoneNumber", SqlDbType.NVarChar).Value = ChildToBeUpdated.Parents.PhoneNumber;
+                    command.Parameters.Add("@Details", SqlDbType.NVarChar).Value = ChildToBeUpdated.Details ?? "";
+                    command.Parameters.Add("@IsMet", SqlDbType.Bit).Value = ChildToBeUpdated.IsMet;
+
+                    command.ExecuteNonQuery();
+                }
             }
+
         }
 
         public Child GetById(int id)

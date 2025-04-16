@@ -16,6 +16,19 @@ namespace TumleTjek.ViewModel
     {
         public ICommand GoBackCommand { get; }
 
+
+        private ChildViewModel _selectedChild;
+        public ChildViewModel SelectedChild
+        {
+            get => _selectedChild;
+            set
+            {
+                _selectedChild = value;
+                OnPropertyChanged(nameof(SelectedChild));
+            }
+        }
+        public ICommand ChildDoubleClickCommand { get; }
+
         private readonly NavigationStore _navigationStore;
 
         private BarnRepo barnRepo = new BarnRepo();
@@ -31,9 +44,10 @@ namespace TumleTjek.ViewModel
             ChildVM = new ObservableCollection<ChildViewModel>();
             foreach (Child barn in barnRepo.GetAll())
             {
-                ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Parents, barn.IsMet));
+                ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Details, barn.Parents, barn.IsMet));
             }
             GoBackCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new HomeViewModel1(navigationStore)));
+            ChildDoubleClickCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new ChildArrivalViewModel(SelectedChild, navigationStore)));
 
 
         }
