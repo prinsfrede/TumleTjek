@@ -19,10 +19,15 @@ namespace TumleTjek.ViewModel
         public ICommand AddChildButton { get; }
         public ICommand AbsenceButton { get; }
 
+        public ICommand ChildListButton { get; }
+        public ICommand GoBackButton { get; }
+
         public MedarbejderViewModel(NavigationStore navigationStore)
         {
             AddChildButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new CreateChildViewModel(navigationStore)));
             AbsenceButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new AbsenceViewModel(navigationStore)));
+            ChildListButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new WorkerChildListViewModel(navigationStore)));
+            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new HomeViewModel1(navigationStore)));
         }
 
 

@@ -13,7 +13,7 @@ using System.Data;
 
 namespace TumleTjek.Repo
 {
-    public class BarnRepo : IRepo<Child>
+    public class BarnRepo 
     {
         private readonly string ConnectionString;
         private List<Child> children;
@@ -52,9 +52,20 @@ namespace TumleTjek.Repo
             }
         }
 
-        public void Remove(Child item)
+        public void Remove(int? id)
         {
-            children.Remove(item);
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("DELETE FROM Child WHERE ChildID = @ChildID", connection);
+                
+                    command.Parameters.AddWithValue("@ChildID", id);
+
+                command.ExecuteNonQuery();
+                
+
+            }
         }
 
         public void Update(Child ChildToBeUpdated)

@@ -17,7 +17,7 @@
         <Button x:Name="StatusFra" Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AbsenceButton}" >
 
         </Button>
-        <Button Content="Liste af Børn" HorizontalAlignment="Left" Margin="28,308,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+        <Button Content="Liste af Børn" HorizontalAlignment="Left" Margin="28,308,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ChildListButton}" >
 
         </Button>
         <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddChildButton}" >
@@ -28,5 +28,6 @@
         </Button>
         <Image x:Name="Logo" Source="/Image/LogoTumleTjek.png" Margin="186,109,26,28" />
         <TextBlock Text="Velkommen" HorizontalAlignment="Left" Margin="452,197,0,0" VerticalAlignment="Top" FontSize="45" FontWeight="Bold" Foreground="Black" Height="70" Width="256"/>
+        <Button Content="Tilbage" HorizontalAlignment="Left" Margin="795,528,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackButton}" />
     </Grid>
 </UserControl>

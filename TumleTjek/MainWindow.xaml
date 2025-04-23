@@ -48,6 +48,13 @@
                     <views:ChildArrivalView/>
                 </DataTemplate>
 
+                <DataTemplate DataType="{x:Type viewModel:WorkerChildListViewModel}">
+                    <views:WorkerChildList/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModel:ChildUpdateViewModel}">
+                    <views:ChildUpdateView/>
+                </DataTemplate>
+
 
 
 
