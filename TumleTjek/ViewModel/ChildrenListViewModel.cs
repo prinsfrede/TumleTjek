@@ -36,6 +36,24 @@ namespace TumleTjek.ViewModel
         public ObservableCollection<ChildViewModel> ChildVM { get; set; }
 
 
+        private string _searchText; // Searchbar - rr
+        public string SearchText
+        {
+            get => SearchText;
+            set
+            {
+                if (_searchText != value)
+                {
+                    _searchText = value;
+                    OnPropertyChanged();
+                    
+                }
+            }
+
+
+
+
+        }
         public ChildrenListViewModel(NavigationStore navigationStore)
         {
 
