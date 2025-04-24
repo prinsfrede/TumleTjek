@@ -16,7 +16,7 @@
         <Image Margin="36,10,768,410" Source="/Image/LogoTumleTjek.png" Stretch="Uniform"/>
 
 
-        <TextBlock HorizontalAlignment="Left" Margin="344,52,0,0"
+        <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0"
                    TextWrapping="Wrap" FontSize="32"
                    FontWeight="Bold" Foreground="#3B3B3B"
                    VerticalAlignment="Top">
@@ -32,13 +32,12 @@
         </TextBlock>
 
 
-        <Border Width="220" Height="36"
-                Margin="335,100,0,0"
+        <Border Width="318" Height="36"
                 Background="White"
                 BorderBrush="#D0D0D0"
                 BorderThickness="1"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top">
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" Margin="0,117,0,0">
             <Grid>
                 <TextBox Background="Transparent"
                          BorderThickness="0"
@@ -49,21 +48,20 @@
                 <TextBlock Text="🔍 Søg"
                            FontSize="16"
                            Foreground="#999"
-                           VerticalAlignment="Center"
-                           Margin="10,0,0,0"
-                           IsHitTestVisible="False"/>
+                           
+                           Margin="0,5,10,5"
+                        IsHitTestVisible="False"/>
             </Grid>
         </Border>
 
 
-        <ListBox ItemsSource="{Binding ChildVM}" Margin="296,142,406,111"
+
+        <ListBox Height="400" Width="400" ItemsSource="{Binding ChildVM}" SelectedItem="{Binding SelectedChild, Mode=TwoWay}"
                  BorderBrush="#E0E0E0"
-                 BorderThickness="2"
-                 Background="White"
-                 Padding="10">
-    <Grid Background="#efded4">
-        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackCommand}" />
-        <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}" SelectedItem="{Binding SelectedChild, Mode=TwoWay}">
+                    BorderThickness="2"
+                    Background="White"
+                    Padding="10" Margin="300,162,300,38">
+
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <i:InvokeCommandAction Command="{Binding ChildDoubleClickCommand}"/>
@@ -76,7 +74,9 @@
                     <Border Margin="0 5" Padding="10"
                             Background="#FFF9F6"
                             BorderBrush="#DDD"
-                            BorderThickness="1">
+                            BorderThickness="1"
+                            Width="340"
+                            >
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="{Binding Name}"
                                        FontSize="20"
@@ -93,9 +93,10 @@
         </ListBox>
 
 
+
         <Button Content="← Gå Tilbage"
                 HorizontalAlignment="Left"
-                Margin="820,504,0,0"
+                Margin="820,505,0,0"
                 VerticalAlignment="Top"
                 Height="41" Width="133"
                 Background="#9F6E4E"
@@ -123,14 +124,9 @@
                 Foreground="#333"
                 VerticalScrollBarVisibility="Auto" />
         </Border>
-        <Button Width="150" Height="40" Background="#9F6E4E" Foreground="White" FontSize="16" Padding="10,5" 
-        HorizontalAlignment="Left" VerticalAlignment="Top"
-        BorderThickness="0" Margin="370,505,0,0" >
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="Vælg Barn" Margin="0,0,5,0" VerticalAlignment="Center"/>
-                <TextBlock Text="🐾" FontSize="18" VerticalAlignment="Center"/>
-            </StackPanel>
-        </Button>
 
     </Grid>
 </UserControl>
+ 
+    
+    
