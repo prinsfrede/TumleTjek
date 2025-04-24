@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TumleTjek.View"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
             
              Height="600"
@@ -14,7 +15,14 @@
 
     <Grid Background="#efded4">
         <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="795,506,0,0" VerticalAlignment="Top" Height="41" Width="133" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackCommand}" />
-        <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}">
+        <ListBox Height="500" Width="400" ItemsSource="{Binding ChildVM}" SelectedItem="{Binding SelectedChild, Mode=TwoWay}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ChildDoubleClickCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">

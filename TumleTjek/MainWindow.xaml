@@ -21,12 +21,12 @@
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type viewModel:HomeViewModel1}">
                     <views:HomeView />
-                    
+
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModel:ChildrenListViewModel}">
                     <views:ChildrenListView/>
                 </DataTemplate>
-                
+
                 <DataTemplate DataType="{x:Type viewModel:MedarbejderLoginVM}">
                     <views:MedarbejderLogin/>
                 </DataTemplate>
@@ -43,6 +43,12 @@
                 <DataTemplate DataType="{x:Type viewModel:AbsenceViewModel}">
                     <views:AbsenceView/>
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewModel:ChildArrivalViewModel}">
+                    <views:ChildArrivalView/>
+                </DataTemplate>
+
+
 
 
             </ContentControl.Resources>
