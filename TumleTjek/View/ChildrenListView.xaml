@@ -11,10 +11,10 @@
 
     <Grid Background="#efded4">
 
-        
+
         <Image Margin="36,10,768,410" Source="/Image/LogoTumleTjek.png" Stretch="Uniform"/>
 
-   
+
         <TextBlock HorizontalAlignment="Left" Margin="344,52,0,0"
                    TextWrapping="Wrap" FontSize="32"
                    FontWeight="Bold" Foreground="#3B3B3B"
@@ -22,7 +22,7 @@
             <Run Text="Find dit barn."/>
         </TextBlock>
 
-    
+
         <TextBlock HorizontalAlignment="Left" Margin="820,107,0,0"
                    TextWrapping="Wrap" VerticalAlignment="Top"
                    FontSize="16" FontWeight="SemiBold"
@@ -30,7 +30,7 @@
             <Run Text="Dagens Aktiviteter"/>
         </TextBlock>
 
-        
+
         <Border Width="220" Height="36"
                 Margin="335,100,0,0"
                 Background="White"
@@ -54,7 +54,7 @@
             </Grid>
         </Border>
 
-        
+
         <ListBox ItemsSource="{Binding ChildVM}" Margin="296,142,406,111"
                  BorderBrush="#E0E0E0"
                  BorderThickness="2"
@@ -81,10 +81,10 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-       
+
         <Button Content="← Gå Tilbage"
                 HorizontalAlignment="Left"
-                Margin="820,511,0,0"
+                Margin="820,504,0,0"
                 VerticalAlignment="Top"
                 Height="41" Width="133"
                 Background="#9F6E4E"
@@ -93,7 +93,7 @@
                 BorderBrush="Transparent"
                 Command="{Binding GoBackCommand}" />
 
-     
+
         <Border Width="160"
                 Height="200"
                 BorderBrush="#CCC"
@@ -112,6 +112,14 @@
                 Foreground="#333"
                 VerticalScrollBarVisibility="Auto" />
         </Border>
+        <Button Width="150" Height="40" Background="#9F6E4E" Foreground="White" FontSize="16" Padding="10,5" 
+        HorizontalAlignment="Left" VerticalAlignment="Top"
+        BorderThickness="0" Margin="370,505,0,0" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Vælg Barn" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                <TextBlock Text="🐾" FontSize="18" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </UserControl>
