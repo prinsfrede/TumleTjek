@@ -25,7 +25,7 @@ namespace TumleTjek.View
         public AbsenceView()
         {
             InitializeComponent();
-            DataContext = new AbsenceViewModel(new NavigationStore());
+          
         }
     }
 }

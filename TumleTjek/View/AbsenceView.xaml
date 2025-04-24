@@ -19,7 +19,7 @@
         <Grid Margin="229,68,22,120">
             <!--Her er grafen kan kun se nå programet køre--> 
             <ContentControl Content="{Binding PlotControl, Mode=OneTime}"/>
-            <ContentControl Content="Test Content" Margin="212,51,40,126"/>
+            
         </Grid>
     </Grid>
 </UserControl>
