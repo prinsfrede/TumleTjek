@@ -83,7 +83,7 @@ namespace TumleTjek.ViewModel
               Name = Name,
               Age = ageint,
               
-              Parents = new Forældre
+              Parents = new Parent
               {
                   Name = ForældreName,
                   PhoneNumber = ForældrePhoneNumber

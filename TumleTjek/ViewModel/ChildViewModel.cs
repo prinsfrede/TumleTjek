@@ -9,7 +9,7 @@ namespace TumleTjek.ViewModel
 {
     public class ChildViewModel
     {
-        public ChildViewModel(Child child, string? name, int? age, string? details, Forældre parents, bool? isMet)
+        public ChildViewModel(Child child, string? name, int? age, string? details, Parent parents, bool? isMet)
         {
             Child = child;
             Name = name;
@@ -25,7 +25,7 @@ namespace TumleTjek.ViewModel
 
         public string? Details { get; set; }
 
-        public Forældre Parents { get; set; }
+        public Parent Parents { get; set; }
 
         public bool? IsMet { get; set; }
     }

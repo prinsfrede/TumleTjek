@@ -14,7 +14,7 @@ namespace TumleTjek.Model
 
         public string? Details { get; set; }
 
-        public Forældre? Parents { get; set; }
+        public Parent? Parents { get; set; }
 
         public bool? IsMet { get; set; }
     }
