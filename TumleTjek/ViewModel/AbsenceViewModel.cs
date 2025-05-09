@@ -27,7 +27,7 @@ namespace TumleTjek.ViewModel
 
         public AbsenceViewModel(NavigationStore navigationStore)
         {
-            GoBackCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderViewModel(navigationStore)));
+            GoBackCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new EmployeeViewModel(navigationStore)));
             Plot();
         }
         /*Her sættes data til grafen*/

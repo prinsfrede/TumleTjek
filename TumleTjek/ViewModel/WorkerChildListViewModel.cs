@@ -47,7 +47,7 @@ namespace TumleTjek.ViewModel
                 ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Details, barn.Parents, barn.IsMet));
             }
 
-            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderViewModel(navigationStore)));
+            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new EmployeeViewModel(navigationStore)));
             DoubleClickCommand = new NavigateCommand(new Services.NavigationService(navigationStore, () => new ChildUpdateViewModel(navigationStore, SelectedChild)));
         }
 
