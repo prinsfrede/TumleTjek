@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for MedarbejderLogin.xaml
+    /// Interaction logic for EmployeeLoginView.xaml
     /// </summary>
-    public partial class MedarbejderLogin : UserControl
+    public partial class EmployeeLoginView : UserControl
     {
-        public MedarbejderLogin()
+        public EmployeeLoginView()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@ using TumleTjek.View;
 
 namespace TumleTjek.ViewModel
 {
-    public class MedarbejderLoginVM : BaseViewModel
+    public class EmployeeLoginViewModel : BaseViewModel
     {
 
 
@@ -20,7 +20,7 @@ namespace TumleTjek.ViewModel
 
 
 
-        public MedarbejderLoginVM(NavigationStore navigationStore)
+        public EmployeeLoginViewModel(NavigationStore navigationStore)
         {
             LoginButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderViewModel(navigationStore)));
         }
