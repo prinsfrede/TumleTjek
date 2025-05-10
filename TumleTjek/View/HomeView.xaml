@@ -14,7 +14,8 @@
     <Grid>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,516,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ChildListButton}"/>
         <Button Content="Medarbejder Login" HorizontalAlignment="Left" Margin="860,526,0,0" VerticalAlignment="Top" Height="34" Width="104" Background="#9f6e4e" Foreground="White" Command="{Binding MedarbejderLoginButton}"/>
-       
+        <Image x:Name="Logo" Source="/Image/LogoTumleTjek.png" Margin="127,28,85,109" />
+        <TextBlock Text="Velkommen" HorizontalAlignment="Left" Margin="393,118,0,0" VerticalAlignment="Top" FontSize="45" FontWeight="Bold" Foreground="Black" Height="70" Width="256"/>
 
     </Grid>
 </UserControl>
