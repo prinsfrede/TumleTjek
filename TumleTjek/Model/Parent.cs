@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TumleTjek.Model
 {
-    public class Forældre
+    public class Parent
     {
         public string? Name { get; set; }
         public string? Email { get; set; }

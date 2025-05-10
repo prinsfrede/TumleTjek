@@ -27,12 +27,12 @@
                     <views:ChildrenListView/>
                 </DataTemplate>
 
-                <DataTemplate DataType="{x:Type viewModel:MedarbejderLoginVM}">
-                    <views:MedarbejderLogin/>
+                <DataTemplate DataType="{x:Type viewModel:EmployeeLoginViewModel}">
+                    <views:EmployeeLoginView/>
                 </DataTemplate>
 
-                <DataTemplate DataType="{x:Type viewModel:MedarbejderViewModel}">
-                    <views:MedarbejderView/>
+                <DataTemplate DataType="{x:Type viewModel:EmployeeViewModel}">
+                    <views:EmployeeView/>
                 </DataTemplate>
 
 
