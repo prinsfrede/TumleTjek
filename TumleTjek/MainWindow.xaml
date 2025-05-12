@@ -21,6 +21,8 @@
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type viewModel:HomeViewModel1}">
                     <views:HomeView />
+                    
+
 
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModel:ChildrenListViewModel}">
@@ -55,7 +57,9 @@
                     <views:ChildUpdateView/>
                 </DataTemplate>
 
-
+                <DataTemplate DataType="{x:Type viewModel:ActivtyViewModel}">
+                    <views:ActivtyView/>
+                </DataTemplate>
 
 
             </ContentControl.Resources>
