@@ -11,7 +11,7 @@
              
              >
     <Grid>
-        <Button x:Name="AktiviteterButton" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+        <Button x:Name="AktiviteterButton" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ActivtyButton}">
 
         </Button>
         <Button x:Name="StatusFra" Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AbsenceButton}" >

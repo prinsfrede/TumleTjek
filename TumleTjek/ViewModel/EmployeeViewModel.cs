@@ -10,20 +10,23 @@ using TumleTjek.TechnicalServices;
 using TumleTjek.View;
 using TumleTjek.ViewModel;
 using TumleTjek.Services;
+using System.Diagnostics;
 
 namespace TumleTjek.ViewModel
 {
     public class EmployeeViewModel : BaseViewModel
     {
-
+        public ICommand ActivtyButton { get; }
         public ICommand AddChildButton { get; }
         public ICommand AbsenceButton { get; }
 
         public ICommand ChildListButton { get; }
         public ICommand GoBackButton { get; }
+      
 
         public EmployeeViewModel(NavigationStore navigationStore)
         {
+            ActivtyButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new ActivtyViewModel(navigationStore)));
             AddChildButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new CreateChildViewModel(navigationStore)));
             AbsenceButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new AbsenceViewModel(navigationStore)));
             ChildListButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new WorkerChildListViewModel(navigationStore)));
