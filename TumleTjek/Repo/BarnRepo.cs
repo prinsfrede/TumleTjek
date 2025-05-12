@@ -112,7 +112,7 @@ namespace TumleTjek.Repo
                                 ChildID = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0),
                                 Name = reader.IsDBNull(1) ? null : reader.GetString(1),
                                 Age = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2),
-                                Parents = new Forældre
+                                Parents = new Parent
                                 {
                                     Name = reader.IsDBNull(3) ? null : reader.GetString(3),
                                     PhoneNumber = reader.IsDBNull(4) ? null : reader.GetString(4)

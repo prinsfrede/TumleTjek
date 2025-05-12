@@ -13,7 +13,7 @@ using TumleTjek.Services;
 
 namespace TumleTjek.ViewModel
 {
-    public class MedarbejderViewModel : BaseViewModel
+    public class EmployeeViewModel : BaseViewModel
     {
 
         public ICommand AddChildButton { get; }
@@ -22,7 +22,7 @@ namespace TumleTjek.ViewModel
         public ICommand ChildListButton { get; }
         public ICommand GoBackButton { get; }
 
-        public MedarbejderViewModel(NavigationStore navigationStore)
+        public EmployeeViewModel(NavigationStore navigationStore)
         {
             AddChildButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new CreateChildViewModel(navigationStore)));
             AbsenceButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new AbsenceViewModel(navigationStore)));

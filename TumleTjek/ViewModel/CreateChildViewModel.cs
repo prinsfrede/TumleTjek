@@ -30,7 +30,7 @@ namespace TumleTjek.ViewModel
         public CreateChildViewModel(NavigationStore navigationStore)
         {
             AddChildButton = new RelayCommand(AddChildButtonExecute);
-            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderViewModel(navigationStore)));
+            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new EmployeeViewModel(navigationStore)));
 
         }
 
@@ -83,7 +83,7 @@ namespace TumleTjek.ViewModel
               Name = Name,
               Age = ageint,
               
-              Parents = new Forældre
+              Parents = new Parent
               {
                   Name = ForældreName,
                   PhoneNumber = ForældrePhoneNumber

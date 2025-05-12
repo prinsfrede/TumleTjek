@@ -23,7 +23,7 @@ namespace TumleTjek.ViewModel
         public HomeViewModel1(NavigationStore navigationStore)
         {
             ChildListButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new ChildrenListViewModel(navigationStore)));
-            MedarbejderLoginButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new MedarbejderLoginVM(navigationStore)));
+            MedarbejderLoginButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new EmployeeLoginViewModel(navigationStore)));
 
         }
 
