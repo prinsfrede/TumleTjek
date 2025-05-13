@@ -31,7 +31,7 @@ namespace TumleTjek.ViewModel
 
         private readonly NavigationStore _navigationStore;
 
-        private BarnRepo barnRepo = new BarnRepo();
+        private ChildRepo barnRepo = new ChildRepo();
 
         public ObservableCollection<ChildViewModel> ChildVM { get; set; }
 

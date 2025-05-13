@@ -22,7 +22,7 @@ namespace TumleTjek.ViewModel
         private string _forældreName;
         private string _forældrePhoneNumber;
 
-        private BarnRepo childrepo = new BarnRepo();
+        private ChildRepo childrepo = new ChildRepo();
 
         public ICommand AddChildButton { get; }
         public ICommand GoBackButton { get; }

@@ -7,32 +7,32 @@ using TumleTjek.Model;
 
 namespace TumleTjek.Repo
 {
-    public class AktivitetRepo: IRepo<Aktivitet>
+    public class ActivtyRepo
 
     {
-        private List<Aktivitet> aktiviteter = new List<Aktivitet>();
+        private List<Activty> aktiviteter = new List<Activty>();
 
-        public void Add(Aktivitet item)
+        public void Add(Activty item)
         {
             throw new NotImplementedException();
         }
 
-        public List<Aktivitet> GetAll()
+        public List<Activty> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Aktivitet GetById(int id)
+        public Activty GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Aktivitet item)
+        public void Remove(Activty item)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Aktivitet item)
+        public void Update(Activty item)
         {
             throw new NotImplementedException();
         }

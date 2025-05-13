@@ -80,7 +80,7 @@ namespace TumleTjek.ViewModel
             _OriginalChild.IsMet = IsMet;
             _OriginalChild.Details = Details;
 
-            var repo = new BarnRepo();
+            var repo = new ChildRepo();
 
             repo.Update(_OriginalChild);
         }

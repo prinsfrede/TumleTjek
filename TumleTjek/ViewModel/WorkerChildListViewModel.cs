@@ -33,7 +33,7 @@ namespace TumleTjek.ViewModel
             }
         }
 
-        private BarnRepo barnRepo = new BarnRepo();
+        private ChildRepo barnRepo = new ChildRepo();
 
         public ObservableCollection<ChildViewModel> ChildVM { get; set; }
 

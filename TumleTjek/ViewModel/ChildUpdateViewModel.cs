@@ -94,7 +94,7 @@ namespace TumleTjek.ViewModel
             _OriginalChild.Age = Age;
             _OriginalChild.Parents.Name = ParentName;
             _OriginalChild.Parents.PhoneNumber = ParentPhoneNumber;
-            var repo = new BarnRepo();
+            var repo = new ChildRepo();
             MessageBox.Show($"Barnet {Name} er blevet opdateret.", "Opdater Barn", MessageBoxButton.OK, MessageBoxImage.Information);
             repo.Update(_OriginalChild);
 
@@ -102,7 +102,7 @@ namespace TumleTjek.ViewModel
 
         public void RemoveChildFromDataBase()
         {
-            var repo = new BarnRepo();
+            var repo = new ChildRepo();
             repo.Remove(_OriginalChild.ChildID);
 
             MessageBox.Show($"Barnet {Name} er blevet fjernet.", "Fjern Barn", MessageBoxButton.OK, MessageBoxImage.Information);

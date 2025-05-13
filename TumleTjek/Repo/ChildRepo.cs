@@ -13,11 +13,11 @@ using System.Data;
 
 namespace TumleTjek.Repo
 {
-    public class BarnRepo 
+    public class ChildRepo 
     {
         private readonly string ConnectionString;
         private List<Child> children;
-        public BarnRepo()
+        public ChildRepo()
         {
             IConfigurationRoot config = new ConfigurationBuilder()
                 .AddJsonFile("TechnicalServices/appsettings.json")

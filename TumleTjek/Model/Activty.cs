@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TumleTjek.Model
 {
-    public class Aktivitet
+    public class Activty
     {
         public string Name { get; set; }
         public string Description { get; set; }
