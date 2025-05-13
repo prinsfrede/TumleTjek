@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TumleTjek.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="600"
+             Width="500"
+             Background="#efded4">
     <Grid>
-            
+        <TextBlock HorizontalAlignment="Left" Margin="188,40,0,0" TextWrapping="Wrap" Text="Tilføj en Aktivitet" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,99,0,0" TextWrapping="Wrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Height="157"/>
+        
     </Grid>
 </UserControl>
