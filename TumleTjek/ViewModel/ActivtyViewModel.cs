@@ -19,7 +19,7 @@ namespace TumleTjek.ViewModel
 
         public ActivtyViewModel(NavigationStore navigationStore)
         {
-            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new HomeViewModel1(navigationStore)));
+            GoBackButton = new NavigateCommand(new Services.NavigationService(navigationStore, () => new EmployeeViewModel(navigationStore)));
         }
 
     }
