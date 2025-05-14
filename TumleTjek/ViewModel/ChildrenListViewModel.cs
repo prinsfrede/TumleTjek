@@ -31,7 +31,7 @@ namespace TumleTjek.ViewModel
 
         private readonly NavigationStore _navigationStore;
 
-        private ChildRepo barnRepo = new ChildRepo();
+        private ChildRepo childRepo = new ChildRepo();
 
         public ObservableCollection<ChildViewModel> ChildVM { get; set; }
 
@@ -60,7 +60,7 @@ namespace TumleTjek.ViewModel
             this._navigationStore = navigationStore;
 
             ChildVM = new ObservableCollection<ChildViewModel>();
-            foreach (Child barn in barnRepo.GetAll())
+            foreach (Child barn in childRepo.GetAll())
             {
                 ChildVM.Add(new ChildViewModel(barn, barn.Name, barn.Age, barn.Details, barn.Parents, barn.IsMet));
             }

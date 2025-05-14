@@ -23,7 +23,7 @@
         <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddChildButton}" >
 
         </Button>
-        <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" >
+        <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddActivtyButton}">
 
         </Button>
         <Image x:Name="Logo" Source="/Image/LogoTumleTjek.png" Margin="186,109,26,28" />

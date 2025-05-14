@@ -10,7 +10,18 @@
              Background="#efded4">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="188,40,0,0" TextWrapping="Wrap" Text="Tilføj en Aktivitet" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,99,0,0" TextWrapping="Wrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Height="157"/>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="122,79,0,0" TextWrapping="Wrap" Text="Aktivitet Navn" VerticalAlignment="Top" RenderTransformOrigin="0.546,-1.313"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="{Binding ActivityName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="122,129,0,0" TextWrapping="Wrap" Text="Aktivitet Beskrivelse" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="{Binding ActivityDescription, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Height="101"/>
+        <TextBlock HorizontalAlignment="Left" Margin="122,261,0,0" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Margin="21,282,0,0" SelectedDate="{Binding ActivityDate}" VerticalAlignment="Top" Width="256" Height="200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="298,261,0,0" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="282,282,0,0" TextWrapping="Wrap" Text="{Binding ActivityDuration, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="150" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="282,309,0,0" TextWrapping="Wrap" Text="Sted" VerticalAlignment="Top" RenderTransformOrigin="8.65,-10.437"/>
+        <TextBox HorizontalAlignment="Left" Margin="282,330,0,0" TextWrapping="Wrap" Text="{Binding ActivityLocation, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="150" Height="22"/>
+        <Button Content="Tilføj Aktivitet" HorizontalAlignment="Left" Margin="301,428,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddActivityButton}" />
+        <Button Content="Gå Tilbage" HorizontalAlignment="Left" Margin="301,478,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding GoBackButton}" />
     </Grid>
 </UserControl>
+
