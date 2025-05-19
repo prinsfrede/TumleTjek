@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for ActivtyView.xaml
+    /// Interaction logic for ActivityView.xaml
     /// </summary>
-    public partial class ActivtyView : UserControl
+    public partial class ActivityView : UserControl
     {
-        public ActivtyView()
+        public ActivityView()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@
              
              >
     <Grid>
-        <Button x:Name="AktiviteterButton" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ActivtyButton}">
+        <Button x:Name="Aktiviteter" Content="Aktiviteter" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding ActivityButton}" >
 
         </Button>
         <Button x:Name="StatusFra" Content="Status på fravær" HorizontalAlignment="Left" Margin="28,224,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AbsenceButton}" >
@@ -23,7 +23,7 @@
         <Button Content="Tilføj Barn" HorizontalAlignment="Left" Margin="28,390,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddChildButton}" >
 
         </Button>
-        <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddActivtyButton}">
+        <Button Content="Opret ny aktivitet" HorizontalAlignment="Left" Margin="28,471,0,0" VerticalAlignment="Top" Height="44" Width="156" Background="#9f6e4e" Foreground="White" Command="{Binding AddActivityButton}">
 
         </Button>
         <Image x:Name="Logo" Source="/Image/LogoTumleTjek.png" Margin="186,109,26,28" />

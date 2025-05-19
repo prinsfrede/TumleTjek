@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TumleTjek.ViewModel;
 
 namespace TumleTjek.View
 {
     /// <summary>
-    /// Interaction logic for AddActivtyView.xaml
+    /// Interaction logic for AddActivityView.xaml
     /// </summary>
-    public partial class AddActivtyView : UserControl
+    public partial class AddActivityView : UserControl
     {
-        public AddActivtyView()
+        public AddActivityView()
         {
             InitializeComponent();
+            
         }
     }
 }

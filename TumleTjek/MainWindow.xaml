@@ -57,12 +57,12 @@
                     <views:ChildUpdateView/>
                 </DataTemplate>
 
-                <DataTemplate DataType="{x:Type viewModel:ActivtyViewModel}">
-                    <views:ActivtyView/>
+                <DataTemplate DataType="{x:Type viewModel:ActivityViewModel}">
+                    <views:ActivityView/>
                 </DataTemplate>
 
-                <DataTemplate DataType="{x:Type viewModel:AddActivtyViewModel}">
-                    <views:AddActivtyView/>
+                <DataTemplate DataType="{x:Type viewModel:AddActivityViewModel}">
+                    <views:AddActivityView/>
                 </DataTemplate>
 
 
