@@ -13,7 +13,7 @@
     <Grid Background="#efded4">
         <Button Content="Login" HorizontalAlignment="Center" Margin="0,540,0,0" VerticalAlignment="Top" Height="34" Width="104" Background="#9f6e4e" Command="{Binding LoginButton}" Foreground="White"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" Text="Medarbejder Login" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,164,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="176" Height="37"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="176" Height="37"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,164,0,0" TextWrapping="Wrap" Text="Bruger navn" VerticalAlignment="Top" Width="176" Height="37"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="176" Height="37"/>
     </Grid>
 </UserControl>
